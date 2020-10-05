@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body{
+		margin: 0;
+		padding: 0;
+	}
+	
+	header{
+		height: 44px;
+		margin: 0;
+		background-color: #2e2e2e;
+	}
+	ul#menu{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font: 15px Sans-serif;
+		line-height: 44px;
+		text-align: center;
+	}
+	
+	ul#menu>li{
+		display: inline-block;
+		width: 100px; 
+	}
+	ul#menu>li>a{
+		color: #cdcdcd;
+		text-decoration: none;
+	}
+	ul#menu>li>a:hover{
+		color: #fff;
+	}
+	
+	#apple{
+		text-indent: -9999px;
+		background-image: url(images/apple.svg);
+		position: absolute;
+		top: 0;
+		background-size: 16px 44px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		
+		margin-left: -24px;
+		width: 48px;
+	}

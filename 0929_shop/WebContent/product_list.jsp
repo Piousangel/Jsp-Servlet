@@ -10,12 +10,11 @@
 <title>Insert title here</title>
 
 <style type="text/css">
-	.empty{
-		text-align : center;
-		height: 50px;
-		line-height: 50px;
-		font-size: 12px;	
+	#title{
+		font-size:30px;
+		color: maroon;
 	}
+	
 	.txt_c{text-align: center}
        a:link{text-decoration:none; color:navy}
        a:visited{text-decoration:none; color:navy}
@@ -45,6 +44,7 @@
 	ProductVO[] list = sb.getP_list();
 
 %>
+	<jsp:include page="nav.jsp"/>
 
 	<table  align="center" width="600" border="1" 
  			style="border-collapse:collapse;font-size:8pt" bordercolor="navy"  
@@ -69,13 +69,13 @@
         <td><%=pvo.getP_num() %></td>
         <td><img src="images/<%=pvo.getP_image_s() %>" width="100" height="95"></td>
         <td>
-            <a href="product_content.jsp?prod_num=><%=pvo.getP_num() %>">
+            <a href="product_content.jsp?prod_num=<%=pvo.getP_num() %>">
                 <%=pvo.getP_name() %>
             </a>
         </td>
         <td>
             할인가 :<%=pvo.getP_saleprice()%>원<br>
-            <font color="red">()</font>
+            <font color="red">(<%= pvo.getPercent()%>%)</font>
         </td>
         <td>
             시중 가격 :<%=pvo.getP_price()%>원
