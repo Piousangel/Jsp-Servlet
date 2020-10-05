@@ -88,7 +88,7 @@
 			    <tr>
 			        <td colspan="2" align="center">
 			            <input type="button" value="장바구니에 담기" 
-			            onclick="javascript:location.href='addProduct.jsp?p_num='"/>
+			            onclick="javascript:location.href='addProduct.jsp?p_num=<%=pvo.getP_num()%>'"/>
 			            <input type="button" value="장바구니 보기" 
 			            onclick="javascript:location.href='cartList.jsp'"/>
 			        </td>
